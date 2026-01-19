@@ -1,0 +1,19 @@
+---
+title: "Homework 1 - Submission 1"
+output: html_document
+---
+
+GitHub repository: https://github.com/CarsonSleeman/test-repo
+
+## Table 1: Plan count by plan type (all plans, 2015)
+
+```{r}
+library(readr)
+library(knitr)
+
+t1 <- read_csv("../results/table1_plan_count_all.csv", show_col_types = FALSE)
+kable(t1)
+t2 <- read_csv("../results/table2_plan_count_exclusions.csv", show_col_types = FALSE)
+kable(t2)
+t3 <- read_csv("../results/table3_avg_enroll_all.csv", show_col_types = FALSE)
+kable(t3)
