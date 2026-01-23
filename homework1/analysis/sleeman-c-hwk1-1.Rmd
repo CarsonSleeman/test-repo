@@ -6,26 +6,46 @@ output:
 ---
 
 GitHub repository: https://github.com/CarsonSleeman/test-repo
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+<style>
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 18px 0;
+  background: #fafafa;
+}
+.card h2 {
+  margin-top: 0;
+  font-size: 1.15em;
+}
+.caption {
+  color: #555;
+  margin: 6px 0 12px 0;
+}
+table {
+  width: 100%;
+}
+</style>
+
+```{r setup, include=FALSE}
 library(readr)
 library(knitr)
+<div class="card"> <h2>Table 1. Plan count by plan type (all plans, 2015)</h2> <div
+class="caption">Counts of unique plans by plan type.</div>
 t1 <- read_csv("../results/table1_plan_count_all.csv", show_col_types = FALSE)
 kable(t1, col.names = c("Plan type", "Number of plans"))
-library(readr)
-library(knitr)
 
+</div> <div class="card"> <h2>Table 2. Plan count by plan type (excluding SNP, EGHP, and 800-series, 2015)</h2> <div class="caption">Same as Table 1, after applying the exclusions.</div>
 t2 <- read_csv("../results/table2_plan_count_exclusions.csv", show_col_types = FALSE)
 kable(t2, col.names = c("Plan type", "Number of plans"))
 
-library(readr)
-library(knitr)
-
+</div> <div class="card"> <h2>Table 3. Average enrollment by plan type (all plans, 2015)</h2> <div class="caption">Average enrollment across plan–county observations in 2015.</div>
 t3 <- read_csv("../results/table3_avg_enroll_all.csv", show_col_types = FALSE)
 kable(t3, col.names = c("Plan type", "Average enrollment"), digits = 1)
 
-library(readr)
-library(knitr)
-
+</div> <div class="card"> <h2>Table 4. Average enrollment by plan type (exclusions + approved service-area counties, 2015)</h2> <div class="caption">Filters from Table 2 plus restriction to counties where plans are approved per service area files.</div>
 t4 <- read_csv("../results/table3_avg_enroll_exclusions.csv", show_col_types = FALSE)
 kable(t4, col.names = c("Plan type", "Average enrollment"), digits = 1)
 
+</div> EOF ```
