@@ -1,2 +1,4 @@
-homework1/data/
-.ipynb_checkpoints/
+*.log
+*.tex
+*.aux
+*.out
